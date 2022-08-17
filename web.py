@@ -31,32 +31,32 @@ url = "https://www.amazon.com/sp?seller=A2F715JLB4F47&sshmPath=shipping-rates"
 driver.get(url)
 time.sleep(3)
 coks = [
-    {"domain": ".amazon.com", "expirationDate": 1655144240, "hostOnly": False, "httpOnly": True, "name": "session-id",
-     "path": "/", "secure": False, "session": True, "storeId": "0", "value": "139-3721984-7722038", "id": 0},
-    {"domain": ".amazon.com", "expirationDate": 1655144240, "hostOnly": False, "httpOnly": True, "name": "csrf",
-     "path": "/", "secure": False, "session": True, "storeId": "0", "value": "1655144240", "id": 0},
-    {"domain": ".amazon.com", "expirationDate": 1655144240, "hostOnly": False, "httpOnly": True, "name": "mbox",
-     "path": "/", "secure": False, "session": True, "storeId": "0", "value": "94a98f29417248bd9b6c2d98fd7df272",
+    {"domain": ".amazon.com", "expirationDate": 1650282539, "hostOnly": False, "httpOnly": True, "name": "session-id",
+     "path": "/", "secure": False, "session": True, "storeId": "0", "value": "139-7043298-6579639", "id": 0},
+    {"domain": ".amazon.com", "expirationDate": 1650282539, "hostOnly": False, "httpOnly": True, "name": "ubid-main",
+     "path": "/", "secure": False, "session": True, "storeId": "0", "value": "132-8679100-5244962", "id": 0},
+    {"domain": ".amazon.com", "expirationDate": 1650282539, "hostOnly": False, "httpOnly": True, "name": "csrf",
+     "path": "/", "secure": False, "session": True, "storeId": "0", "value": "1650282539", "id": 0},
+    {"domain": ".amazon.com", "expirationDate": 1650282539, "hostOnly": False, "httpOnly": True, "name": "mbox",
+     "path": "/", "secure": False, "session": True, "storeId": "0", "value": "33592acf9f0e489fad879ae38ca0b810",
      "id": 0},
-    {"domain": ".amazon.com", "expirationDate": 1655144240, "hostOnly": False, "httpOnly": True, "name": "ubid-main",
-     "path": "/", "secure": False, "session": True, "storeId": "0", "value": "134-0124522-4688476", "id": 0},
-    {"domain": ".amazon.com", "expirationDate": 1655144240, "hostOnly": False, "httpOnly": True, "name": "x-main",
+    {"domain": ".amazon.com", "expirationDate": 1650282539, "hostOnly": False, "httpOnly": True, "name": "x-main",
      "path": "/", "secure": False, "session": True, "storeId": "0",
-     "value": "oHpTvoSWG?rFErc7LSxh5J6TDR4Cfk2oJLjLln9lt9HRPwavRVJmZ6szhPregvh6", "id": 0},
-    {"domain": ".amazon.com", "expirationDate": 1655144240, "hostOnly": False, "httpOnly": True, "name": "at-main",
+     "value": "iqmPeaiW?rddvf@EYqSGR0QnzbDBLYi@303FujwSASKTa8k6XLeoiLUCgun73FaC", "id": 0},
+    {"domain": ".amazon.com", "expirationDate": 1650282539, "hostOnly": False, "httpOnly": True, "name": "at-main",
      "path": "/", "secure": False, "session": True, "storeId": "0",
-     "value": "Atza|IwEBIGyMLa5GAWyf7XvitdXUq-thDEM4oxQxoKQiPcON_CUpvvMqwJuoS5ZoYjoVcCbO0S-S1NDdvr87Jiw2Y9rI9xTyJ2PFaE1uDX_djCDONY4D0X-wdnySOEDz_QbB9yO176-FT6x3rsb7fTk6YTmQNNN-k7DozNJImmB75DQj-ZcA8aK3idmFHz0sutttp8wvy8ND43iEQG9gucGmRa-7e5TT8Pvfbg_B86Rxiq0zzTGoR0JMFfgmCFsmgLsgTcmJm0ucbx_8IOurhC2mflWrTCQKn0Ro5lN1nFzkzNz2gerVuQ",
+     "value": "Atza|IwEBIKOMOtbwluGjfCm1rx1lAVQQDaLUNv61enzcSXnVCWf3SEYzIe63lBz7Cz14-Yx8jw-T-hd0trwt7RJxz674sCGDjvJOzRWPmx-Ukf21lf5XZHmbI80DUTj2ptfm8TotmikRPhLTKekHRDtyF7GVMLZuAya1QaORvISCwCNf4J5lU2zd8HLIKgv-UDhqm07CXVIOnD_5tib4uPFbcbsxSlBAEojsl1_6LS-MafqY6IcAKju37CXejNfyc-RWt9ToI9E_-HsVZCW7glLT4HSsoUSiELhbZravlg-74F-GDjYlFQ",
      "id": 0},
-    {"domain": ".amazon.com", "expirationDate": 1655144240, "hostOnly": False, "httpOnly": True, "name": "sess-at-main",
+    {"domain": ".amazon.com", "expirationDate": 1650282539, "hostOnly": False, "httpOnly": True, "name": "sess-at-main",
      "path": "/", "secure": False, "session": True, "storeId": "0",
-     "value": "j3Rd0KWvjpMvB1hQs120dnUZ1cP7KV9/+iSwOXL7IDc=", "id": 0}]
+     "value": "NnfurebNRsN/+xuxum4ppai/MkchDLW9V4Eh9V7EQQE=", "id": 0}]
 
 for cok in coks:
-
     cookie = {"name": cok["name"], "value": cok["value"]}
     driver.add_cookie(cookie)
 
 driver.get(url)
+
 
 # driver.maximize_window()
 

@@ -90,6 +90,9 @@ class Message:
         payload = {"marketplace": self.marketplace, "merchantId": self.merchantCustomerId, "mimeType": "image/jpeg"}
         response = self.req.post(url, headers=self.headers, json=payload)
         # {"uploadUrl":"https://s3.amazonaws.com/com.amazon.acp.prod.na.buyer-seller-messaging.draft-attachment/attachment/8a38dea1-eb39-4567-b99f-1f6249d1309a?x-amz-meta-sender_role=BUYER&x-amz-meta-recipient_role=SELLER&x-amz-meta-marketplace_id=ATVPDKIKX0DER&x-amz-meta-sender_id=A2E46UJVL63LVX&x-amz-meta-tenant_id=BUYER_SELLER_MESSAGING&x-amz-meta-mime_type=image%2Fjpeg&X-Amz-Security-Token=FwoGZXIvYXdzEEkaDMkIpBFKaxf4G3BllCLEAZzSG8dZs2vJ0sEh3RlXp%2Bnf%2BZ9RbbMAv0RfzgJ7X6CflE%2FosOm2LS1l3Mej6P%2BJPEtldbdbZvUacJ2A15KZhlIFqzT2RyMyNjMlmdn5BZsI%2BCpqsjTiK%2BXjwuGl%2Fzd9tGmhkro0ihYMbLNMdvXDTxtNqyaNVURI8o8E5Zs7TnGg0KirQcVZIOb0OrJxDo8KR%2BLwmaPa9gKYVCXTlf53tx092%2FZWuu2fkJsFdGp3n8TrpPDR%2BvsHC3qtSE38o0j90p61pOEotMnilwYyLdaY6usdVgPlePhp71kua9zQut2DDhxovTWjgyOU4rFncV05Xi65a3SPzMPEWw%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220814T073100Z&X-Amz-SignedHeaders=host&X-Amz-Expires=899&X-Amz-Credential=ASIA567AYZ3MHLVI5KN6%2F20220814%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=f2b975747263ba66aeb05e2414f5d38564b1facf2f42e8c000c569926ffbe9fb","attachmentId":"8a38dea1-eb39-4567-b99f-1f6249d1309a"}
+        if response.status_code != 200:
+            raise CookiesException("")
+
         upload = response.json()
         self.attachments.append({"attachmentId": upload["attachmentId"], "fileName": "3.jpg"})
         return upload["uploadUrl"]
